@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grass Monitoring</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function checkGrassHeight() {
+            // Get the value from the input field
+            var grassHeight = document.getElementById("grass-height").value;
+
+            // If grass height is greater than a certain value (e.g., 5 inches)
+            if (grassHeight >= 5) {
+                alert("The grass is too tall! Time to trim.");
+            } else {
+                alert("The grass is still okay. No trimming needed yet.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Grass Monitoring System</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Monitor Grass</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Keep Your Lawn in Check</h2>
+            <p>Use our system to monitor your grass height and know when it's time to trim!</p>
+        </div>
+    </section>
+
+    <section class="monitor">
+        <div class="container">
+            <h2>Monitor Grass Height</h2>
+            <p>Enter the height of the grass in inches to check if it's time to trim:</p>
+            <input type="number" id="grass-height" placeholder="Enter grass height in inches" min="0" required>
+            <button class="btn" onclick="checkGrassHeight()">Check Grass Status</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Grass Monitoring System. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
